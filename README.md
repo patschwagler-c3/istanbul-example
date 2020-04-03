@@ -52,5 +52,7 @@ reporter.write(collector, false, callback);
 ## reports
 
 Coverage JSON - coverage/coverage-final.json
+
 Coverage Summary JSON - coverage/reports/coverage-summary.json
+
 Coverage HTML - coverage/index.html (and all non-json files & dirs)
