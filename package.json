@@ -12,7 +12,6 @@
     "jasmine-node": "^3.0.0"
   },
   "devDependencies": {
-    "istanbul": "^0.4.5",
-    "nyc": "^15.0.0"
+    "istanbul": "^0.4.5"
   }
 }

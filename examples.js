@@ -16,7 +16,8 @@ function writeReports (collector, reportTypes, reportDir) {
   reporter.write(collector, false, function () { console.log('done'); });
 }
 
-// Example of creating & saving reports from JSON from API
+
+// Example of creating & saving reports from JSON
 var files = ['./coverage/coverage-final.json'];
 var reports = ['html', 'json-summary', 'json'];
 var dir = './coverage/reports';
@@ -24,7 +25,7 @@ var collector = readCoverageFromJSON(files);
 writeReports(collector, reports, dir);
 
 
-// Example of Instrumenting code using API
+// Example of instrumenting the code
 var instrumenter = new Istanbul.Instrumenter();
 var file = fs.readFileSync('../dir1/wee.js');
 var changed = instrumenter.instrumentSync(fs.readFileSync('../dir1/wee.js').toString())
