@@ -11,6 +11,7 @@ npx nyc jasmine-node test
 ```
 
 ## output of the coverage data
+See coverage.json and coverage-final.json for the generated coverage data
 
 ## command to instrument the code
 When running tests using istanbul command from the command line, the instrumented code is not persisted when generating reports.
