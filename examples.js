@@ -18,16 +18,19 @@ function writeReports (collector, reportTypes, reportDir) {
 
 
 // Example of creating & saving reports from JSON
-var files = ['./coverage/coverage-final.json'];
+var files = ['./coverage/coverage-test-1.json', './coverage/coverage-test-2.json'];
 var reports = ['html', 'json-summary', 'json'];
 var dir = './coverage/reports';
 var collector = readCoverageFromJSON(files);
 writeReports(collector, reports, dir);
 
-
+function instrument(file) {
 // Example of instrumenting the code
-var instrumenter = new Istanbul.Instrumenter();
-var file = fs.readFileSync('../dir1/wee.js');
-var changed = instrumenter.instrumentSync(fs.readFileSync('../dir1/wee.js').toString())
+  var instrumenter = new Istanbul.Instrumenter();
+  var file = fs.readFileSync(file);
+  var changed = instrumenter.instrumentSync(fs.readFileSync('../dir1/wee.js').toString())
+  console.log(changed);
+}
 
+// instrument('/dir1/wee.js')
 
